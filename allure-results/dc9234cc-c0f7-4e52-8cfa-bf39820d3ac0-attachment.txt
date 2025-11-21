@@ -1,0 +1,23 @@
+REQ> GET https://rahulshettyacademy.com/client
+FINISHED> https://rahulshettyacademy.com/client
+REQ> GET https://rahulshettyacademy.com/client/
+REQ> GET https://rahulshettyacademy.com/client/runtime.34c0b0600012d18074e4.js
+REQ> GET https://rahulshettyacademy.com/client/polyfills.d5e2c55785e9a2a0b452.js
+REQ> GET https://rahulshettyacademy.com/client/scripts.f335373444f21b6a8037.js
+REQ> GET https://rahulshettyacademy.com/client/main.debaae36313b48de71b3.js
+REQ> GET https://rahulshettyacademy.com/client/styles.61bb682a09597970d7b9.css
+FINISHED> https://rahulshettyacademy.com/client/
+FINISHED> https://rahulshettyacademy.com/client/runtime.34c0b0600012d18074e4.js
+FINISHED> https://rahulshettyacademy.com/client/polyfills.d5e2c55785e9a2a0b452.js
+FINISHED> https://rahulshettyacademy.com/client/styles.61bb682a09597970d7b9.css
+FINISHED> https://rahulshettyacademy.com/client/scripts.f335373444f21b6a8037.js
+FINISHED> https://rahulshettyacademy.com/client/main.debaae36313b48de71b3.js
+REQ> GET https://rahulshettyacademy.com/client/342.9e55d8a34323d7dafdac.js
+REQ> GET https://rahulshettyacademy.com/client/135.bef323e148fc6976570e.js
+FINISHED> https://rahulshettyacademy.com/client/342.9e55d8a34323d7dafdac.js
+FINISHED> https://rahulshettyacademy.com/client/135.bef323e148fc6976570e.js
+REQ> GET https://rahulshettyacademy.com/client/193.d265881eae00ddd5b310.js
+FINISHED> https://rahulshettyacademy.com/client/193.d265881eae00ddd5b310.js
+REQ> GET https://i.ibb.co/q7PTcrL/bg.webp
+REQ> GET https://rahulshettyacademy.com/client/fontawesome-webfont.20fd1704ea223900efa9.woff2?v=4.7.0
+FINISHED> https://rahulshettyacademy.com/client/fontawesome-webfont.20fd1704ea223900efa9.woff2?v=4.7.0

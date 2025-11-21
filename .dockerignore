@@ -1,0 +1,11 @@
+node_modules
+npm-debug.log
+.git
+.github
+.vscode
+playwright-report
+allure-results
+test-results
+.DS_Store
+coverage
+.env

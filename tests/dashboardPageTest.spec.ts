@@ -36,6 +36,8 @@ test("Search and validate the product", async ()=>{
 test("Search and validate the product1", async ()=>{
     await dashboardPage.searchAndViewProductDetails(productName)
     await expect(dashboardPage.viewPageProductName).toHaveText(productName.toLowerCase())
+
+
 })
 
 

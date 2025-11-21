@@ -1,0 +1,3 @@
+REQ> GET https://rahulshettyacademy.com/client/api/users
+Intercepted URL: https://rahulshettyacademy.com/client/api/users
+FINISHED> https://rahulshettyacademy.com/client/api/users

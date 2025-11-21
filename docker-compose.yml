@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  playwright:
+    build: .
+    image: cpwts-playwright
+    container_name: cpwts-playwright
+    environment:
+      - CI=true
+    tty: true
+    # By default the image runs `npx playwright test` via CMD.
+    # To run a specific test, override the command when running the container.
+    # Example: docker-compose run --rm playwright npx playwright test -g "Mock GET API"

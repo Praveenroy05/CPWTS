@@ -40,5 +40,8 @@ test("Calendar practice", async ({page})=>{
     await page.getByText(day,{exact: true}).last().click()
     await expect(page.locator("#datepicker1")).toHaveValue('02/12/2027')
  
+    await page.waitForTimeout(2000)// Wait for 2 seconds for sure
+    await page.waitForEvent('popup') //  wait for popup evnt to ppear on the page
+    await page.waitForLoadState('networkidle') - //Waits for all netwrok calls to finish
 })
  

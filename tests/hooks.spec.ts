@@ -33,3 +33,9 @@ test.afterAll(async function(){
     console.log("After All")
 })
 
+
+test.only("Take screenshot of a page", async ({page})=>{
+  await page.goto("https://rahulshettyacademy.com/client")
+  await page.screenshot({path: "screenshot/page.png"})
+})
+

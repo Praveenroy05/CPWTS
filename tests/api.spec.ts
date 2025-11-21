@@ -28,6 +28,73 @@
 
 import {test, expect, request} from '@playwright/test'
 
+const loginAPI = "https://rahulshettyacademy.com/api/ecom/auth/login"
+const loginPayload = {userEmail: "testnHNk@gmail.com", userPassword: "Testing@1234"}
+const orderPayload = {orders: [{country: "Bahrain", productOrderedId: "68a961959320a140fe1ca57e"}]}
 test("API testing", async ()=>{
 
+    const apiContext = await request.newContext()
+    const apiResponse = await apiContext.post(loginAPI, {
+
+        data: loginPayload,
+
+        // headers :{
+        //     "authorization " : "sjdhfjfd"
+        // }
+    })
+    await expect(apiResponse.status()).toBe(200)
+    const jsonResponse = await apiResponse.json()
+    const token = await jsonResponse.token
+
+    console.log(token);
+
+   const orderResponse =  
+   await apiContext.post("https://rahulshettyacademy.com/api/ecom/order/create-order",{
+    
+        data : orderPayload,
+        headers :{
+            "authorization" : token
+        }
+    
+    })
+
+    expect(orderResponse.status()).toBe(201)
+
+    const orderJsonResponse = await orderResponse.json()
+    console.log(await orderJsonResponse.orders[0])
+
+
+
+
+    // API - https://rahulshettyacademy.com/api/ecom/order/create-order
+    // Method - POST
+    // Body - {orders: [{country: "Bahrain", productOrderedId: "68a961959320a140fe1ca57e"}]}
+    // headers : {
+   //  "authorization" : token
+  //  }
+
+    // Response  - Response status should be 201 
+    // //print the order ID
+
 })
+
+
+test('Mock GET API', async ({page})=>{
+    await page.route('**/api/users', async route =>{
+        await route.fulfill({
+            status : 200,
+            contentType: 'application/json',
+            body : JSON.stringify({
+                users : [
+                    {id : 1, name : "Mock User"},
+                    {id : 2, name : "Cyient User"},
+                    {id : 1, name : "Cyient User2"},
+                ]
+            })
+        })
+    })
+
+    await page.goto("https://rahulshettyacademy.com/api/users")
+    await page.waitForTimeout(50000)
+})
+
