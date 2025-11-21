@@ -33,6 +33,11 @@ test("Search and validate the product", async ()=>{
     await expect(dashboardPage.viewPageProductName).toHaveText(productName.toLowerCase())
 })
 
+test("Search and validate the product1", async ()=>{
+    await dashboardPage.searchAndViewProductDetails(productName)
+    await expect(dashboardPage.viewPageProductName).toHaveText(productName.toLowerCase())
+})
+
 
 // Json or Excel
 
